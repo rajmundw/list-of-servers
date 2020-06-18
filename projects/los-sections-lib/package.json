@@ -1,0 +1,8 @@
+{
+  "name": "los-sections-lib",
+  "version": "8.0.5",
+  "peerDependencies": {
+    "@angular/common": "8.2.0",
+    "@angular/core": "8.2.0"
+  }
+}

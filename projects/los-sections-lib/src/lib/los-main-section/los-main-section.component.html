@@ -1,0 +1,47 @@
+<div class="main-navigation-panel"></div>
+<ng-container *ngIf="(listOfServers$ | async) as listOfServers">
+    <div class="list-of-server-nav">
+        <div class="number-of-server">
+            <div>Servers</div>
+            <div class="number-of-servers">Number of elements: {{(listOfServers | filterServers:filterServersValue).length}}</div>
+        </div>
+        <div class="server-filter">
+
+            <mat-icon matSuffix>search</mat-icon>
+            <input matInput [(ngModel)]="filterServersValue" placeholder="Search">
+        </div>
+    </div>
+    <table mat-table [dataSource]="listOfServers | filterServers:filterServersValue" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="name">
+            <th class="name-col" mat-header-cell *matHeaderCellDef> NAME </th>
+            <td class="name-col"  mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+            <th class="status-col" mat-header-cell *matHeaderCellDef> STATUS </th>
+            <td [ngClass] = "element.status | lowercase " class="status-col" mat-cell *matCellDef="let element"> {{element.status}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="changeStatus">
+
+            <th class="change-status-col" mat-header-cell *matHeaderCellDef> </th>
+            <td class="change-status-col" mat-cell *matCellDef="let element">
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                    <mat-icon>more_horiz</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button (click)="changeServerStatus(status, element.id)"
+                            class="menu-button"
+                            mat-menu-item *ngFor="let status of availableStatuses | filterStatuses:element.status">
+                        <span>{{status}}</span>
+                    </button>
+
+                </mat-menu>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</ng-container>

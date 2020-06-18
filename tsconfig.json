@@ -1,0 +1,78 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "los-sections-lib": [
+        "dist/los-sections-lib",
+        "../../dist/los-sections-lib",
+        "../../../dist/los-sections-lib"
+      ],
+      "los-sections-lib/*": [
+        "dist/los-sections-lib/*",
+        "../../dist/los-sections-lib/*",
+        "../../../dist/los-sections-lib/*"
+      ],
+      "los-api-lib": [
+        "dist/los-api-lib",
+        "../../dist/los-api-lib",
+        "../../../dist/los-api-lib"
+      ],
+      "los-api-lib/*": [
+        "dist/los-api-lib/*",
+        "../../dist/los-api-lib/*",
+        "../../../dist/los-api-lib/*"
+      ],
+      "los-store-lib": [
+        "dist/los-store-lib",
+        "../../dist/los-store-lib",
+        "../../../dist/los-store-lib"
+      ],
+      "los-store-lib/*": [
+        "dist/los-store-lib/*",
+        "../../dist/los-store-lib/*",
+        "../../../dist/los-store-lib/*"
+      ],
+      "los-types-lib": [
+        "dist/los-types-lib",
+        "../../dist/los-types-lib",
+        "../../../dist/los-types-lib"
+      ],
+      "los-types-lib/*": [
+        "dist/los-types-lib/*",
+        "../../dist/los-types-lib/*",
+        "../../../dist/los-types-lib/*"
+      ],
+      "los-common-lib": [
+        "dist/los-common-lib",
+        "../../dist/los-common-lib",
+        "../../../dist/los-common-lib"
+      ],
+      "los-common-lib/*": [
+        "dist/los-common-lib/*",
+        "../../dist/los-common-lib/*",
+        "../../../dist/los-common-lib/*"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}

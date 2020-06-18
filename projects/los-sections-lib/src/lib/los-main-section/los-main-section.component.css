@@ -1,0 +1,113 @@
+body{
+    background: #f2f3f6;
+}
+table.mat-elevation-z8 {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    max-height: 84%;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,.12);
+}
+.status-col{
+    font-weight: 500;
+}
+button{
+    background: none;
+    border: none;
+}
+
+button:focus {
+    outline: none;
+}
+los-main-section {
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main-navigation-panel {
+    width: 100%;
+    height: 8%;
+    background: #494e62;
+}
+.list-of-server-nav {
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    height: 8%;
+    align-items: center;
+    box-sizing: border-box;
+}
+.number-of-server {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.number-of-server > :first-child {
+    font-size: max(1.15vw, 16px);
+    font-weight: 500;
+}
+.number-of-server > :last-child {
+    font-size: max(.85vw, 12px);
+}
+.name-col {
+    width: 30%;
+}
+.status-col {
+    width: 65%
+}
+.rebooting {
+    color: lightgray;
+}
+.online {
+    color: lightseagreen;
+}
+.offline {
+    color: red
+}
+.mat-menu-trigger > .mat-icon:hover {
+    cursor: pointer;
+    background: #e1e4ed;
+    border-radius:50% ;
+}
+button.menu-button:hover {
+    background: #e1e4ed !important;
+}
+snack-bar-container.mat-snack-bar-container {
+    background: #494e62;
+}
+
+.server-filter > input {
+    box-shadow: none;
+    border: 1.5px solid rgba(0,0,0,.12);
+    background: transparent;
+    width: 15vw;
+    height: max(1.5vw, 25px);
+    border-radius: 15px;
+    padding-left: max(2vw, 30px);
+    color: rgba(0,0,0,.25);
+    font-weight: 500;
+    font-size: 16px;
+}
+.server-filter {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.server-filter > input:focus {
+    outline: none;
+}
+.server-filter > mat-icon {
+    color: rgba(0,0,0,.12);
+    position: absolute;
+    left: 0.5vw;
+}
+.server-filter > input::placeholder {
+    color: rgba(0,0,0,.25);
+    font-weight: 500;
+    font-size: 16px;
+}

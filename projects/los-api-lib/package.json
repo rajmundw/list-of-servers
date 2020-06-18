@@ -1,0 +1,8 @@
+{
+  "name": "Server-api-lib",
+  "version": "8.0.6",
+  "peerDependencies": {
+    "@angular/common": "8.2.0",
+    "@angular/core": "8.2.0"
+  }
+}
